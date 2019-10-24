@@ -37,6 +37,9 @@
 			<include name="jersey-media-multipart-2.29.1.jar"/>
 			<include name="jersey-server-2.29.1.jar"/>
 			<include name="javax.ws.rs-api-2.1.jar"/>
+			<include name="jackson-databind-2.9.5.jar"/> 
+			<include name="jackson-core-2.9.5.jar"/>    
+			<include name="jackson-annotations-2.9.0.jar"/>   	
         </fileset>
     </path>
 
