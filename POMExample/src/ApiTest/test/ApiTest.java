@@ -31,9 +31,9 @@ public class ApiTest {
 			Response response = request.post(Entity.entity(mapper.writeValueAsString(jsonBody), MediaType.APPLICATION_JSON));
 
 			if(response.getStatus()==200) {
-				System.out.println("Success: {" + response.getEntity()+ "}");
+				System.out.println("Success: {" + response.readEntity(String.class)+ "}");
 			} else {
-				System.out.println("Failed: {" + response.getEntity() + "}");
+				System.out.println("Failed: {" + response.readEntity(String.class) + "}");
 			}
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
