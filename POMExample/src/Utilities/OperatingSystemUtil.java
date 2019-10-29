@@ -21,6 +21,10 @@ import Test.AbstractBaseTest;
  */
 public class OperatingSystemUtil extends AbstractBaseTest
 {
+    /**
+     * pressEnterKeyOnKeyBoard
+     *
+     */
     public static void pressEnterKeyOnKeyBoard()
     {
         try
