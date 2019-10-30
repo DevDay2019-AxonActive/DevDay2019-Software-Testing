@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import PageFactory.HomePage;
 import Utilities.OperatingSystemUtil;
+import Utilities.VerifyUtil;
 
 /**
  *
@@ -20,16 +21,26 @@ import Utilities.OperatingSystemUtil;
  */
 public class TestSearchPage extends AbstractBaseTest
 {
+    /**
+     * Method description
+     *
+     * @throws InterruptedException
+     */
     @Test(priority=1)
-    public void SearchFunction()
+    public void SearchFunction() throws InterruptedException
     {
         objHomePage = new HomePage(driver);
         // Input keyword to search
-        objHomePage.setTxtSearch("Dac Nhan Tam");
+        objHomePage.setTxtSearch("Rails AntiPatterns");
+
+
+
         OperatingSystemUtil.pressEnterKeyOnKeyBoard();
+        Thread.sleep(50000);
 
-        // Verify result is returned correctly
-
+        // Verify result contains book that has name contain "Rails AntiPatterns"
+        int numberOfBooks = objSearchResultPage.getNumberOfResultNameContainKeyword("Rails AntiPatterns");
+        VerifyUtil.verifyEqual(numberOfBooks, 2);
     }
 
 }
