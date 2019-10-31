@@ -1,10 +1,3 @@
-/*
- * SearchResult.java
- *
- * Copyright by CRIF AG
- * Zürich
- * All rights reserved.
- */
 package PageFactory;
 
 import org.openqa.selenium.WebDriver;
