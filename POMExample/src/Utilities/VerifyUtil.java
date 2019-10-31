@@ -48,6 +48,7 @@ public class VerifyUtil extends AbstractBaseTest
         {
             getVerificationErrors().append(e);
         }
+        System.out.println(objectExpected+ " is equal to " + objectDetected);
         return testResult;
     }
 }

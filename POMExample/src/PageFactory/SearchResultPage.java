@@ -10,6 +10,7 @@ package PageFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import Utilities.OperatingSystemUtil;
 
@@ -21,6 +22,7 @@ import Utilities.OperatingSystemUtil;
  */
 public class SearchResultPage
 {
+
     /**
      * All WebElements are identified by @FindBy annotation
      */
@@ -28,7 +30,17 @@ public class SearchResultPage
     @FindBy(css="div[class='ng-star-inserted']")
     WebElement divSearchResult;
 
-
+    /**
+     * Constructor
+     *
+     * @param driver
+     */
+    public SearchResultPage(WebDriver driver)
+    {
+        this.driver = driver;
+        //This initElements method will create  all WebElements
+        PageFactory.initElements(driver, this);
+    }
 
     /**
      * Method description
@@ -50,7 +62,7 @@ public class SearchResultPage
     {
         int numberOfRecord = 0;
         numberOfRecord = OperatingSystemUtil.findElements(getSearchResult(), "xpath",
-                                                          "//div[@class='ng-star-inserted']//div[@class='col summary d-flex flex-column style-scope div']/h1/strong[contains(text(),'" + strKeyword + "')]").size();
+                                                          "//div[@class='col summary d-flex flex-column style-scope div']/h1/strong[contains(text(),'" + strKeyword + "')]").size();
 
         return numberOfRecord;
     }
