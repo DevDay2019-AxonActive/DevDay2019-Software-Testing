@@ -7,12 +7,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import PageFactory.HomePage;
 import PageFactory.LoginPage;
+import PageFactory.SearchResultPage;
 
 public class AbstractBaseTest
 {
     static WebDriver driver;
     LoginPage objLogin;
     HomePage objHomePage;
+    SearchResultPage objSearchResultPage;
     static StringBuffer verificationErrors;
 
     @BeforeMethod
@@ -22,7 +24,7 @@ public class AbstractBaseTest
         System.setProperty("webdriver.gecko.driver", projectDir + "/conf/GeckoDriverServer/geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("http://demo.guru99.com/V4/");
+        driver.get("http://192.168.68.107:4201");
         verificationErrors = new StringBuffer();
         verificationErrors.setLength(0);
     }
