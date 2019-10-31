@@ -1,10 +1,3 @@
-/*
- * OperatingSystemUtil.java
- *
- * Copyright by CRIF AG
- * Zürich
- * All rights reserved.
- */
 package Utilities;
 
 import java.awt.AWTException;

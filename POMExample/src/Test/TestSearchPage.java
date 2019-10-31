@@ -1,10 +1,3 @@
-/*
- * TestSearchPage.java
- *
- * Copyright by CRIF AG
- * Zürich
- * All rights reserved.
- */
 package Test;
 
 import org.testng.annotations.Test;
