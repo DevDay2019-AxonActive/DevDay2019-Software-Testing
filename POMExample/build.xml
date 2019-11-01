@@ -31,6 +31,11 @@
             <include name="poi-scratchpad-3.9.jar"/>
             <include name="selenium-server-standalone-3.14.0.jar"/>
         	<include name="xmlbeans-2.3.0.jar"/>
+            <include name="java-client-7.2.0.jar"/>
+            <include name="ant-1.9.6.jar"/>
+            <include name="ant-launcher-1.9.6.jar"/>
+            <include name="asm-6.0.jar"/>
+            <include name="cglib-3.2.6.jar"/>
         </fileset>
     </path>
 
