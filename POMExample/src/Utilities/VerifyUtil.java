@@ -36,4 +36,19 @@ public class VerifyUtil extends AbstractBaseTest
         }
 
     }
+    public static boolean verifyEqual(Object objectExpected, Object objectDetected)
+    {
+        boolean testResult = false;
+        try
+        {
+            Assert.assertEquals(objectDetected, objectExpected, objectExpected + " not equals to " + objectDetected);
+            testResult = true;
+        }
+        catch (AssertionError e)
+        {
+            getVerificationErrors().append(e);
+        }
+        System.out.println(objectExpected+ " is equal to " + objectDetected);
+        return testResult;
+    }
 }
