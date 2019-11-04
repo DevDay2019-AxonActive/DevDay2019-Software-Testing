@@ -24,7 +24,7 @@ public class AbstractBaseTest
         System.setProperty("webdriver.gecko.driver", projectDir + "/conf/GeckoDriverServer/geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("http://192.168.68.107:4201");
+        driver.get("http://85.214.44.228:4200/");
         verificationErrors = new StringBuffer();
         verificationErrors.setLength(0);
     }
