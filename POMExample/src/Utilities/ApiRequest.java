@@ -1,4 +1,4 @@
-package ApiTest.model;
+package Utilities;
 
 import org.glassfish.jersey.client.ClientProperties;
 import org.glassfish.jersey.client.JerseyClientBuilder;

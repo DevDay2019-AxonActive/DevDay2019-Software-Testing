@@ -1,4 +1,4 @@
-package ApiTest.test;
+package Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ApiTest.model.ApiRequest;
+import Utilities.ApiRequest;
 
 public class ApiTest {
 
