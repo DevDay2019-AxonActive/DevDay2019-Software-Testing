@@ -25,11 +25,10 @@ public abstract class AbstractMobileBaseTest {
         // Prepare Appium session
         DesiredCapabilities capabilities = DesiredCapabilities.android();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "xxxx");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "xxxxx");
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-//        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.aavn.devday.booklibrary");
-        capabilities.setCapability(MobileCapabilityType.APP, "/Users/lhluong/Downloads/book_library.apk");
+        capabilities.setCapability(MobileCapabilityType.APP, "apk path");
         // Initialize driver
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 

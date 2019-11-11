@@ -71,10 +71,10 @@
     </target>
     <!--Creates the deployable jar file  -->
     <target name="jar" depends="compile">
-        <jar destfile="${dist.dir}\anhdo-automation-test-framework.jar" basedir="${build.dir}">
+        <jar destfile="${dist.dir}\automation-test-framework.jar" basedir="${build.dir}">
             <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
             <manifest>
-                <attribute name="Main-Class" value="anhdo-automation-test-framework" />
+                <attribute name="Main-Class" value="automation-test-framework" />
                 <attribute name="Build-Path" value="${build-classpath}" />
             </manifest>
         </jar>
