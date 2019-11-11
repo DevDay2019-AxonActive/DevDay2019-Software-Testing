@@ -31,6 +31,24 @@
             <include name="poi-scratchpad-3.9.jar"/>
             <include name="selenium-server-standalone-3.14.0.jar"/>
         	<include name="xmlbeans-2.3.0.jar"/>
+        	<include name="jersey-client-2.29.1.jar"/>
+			<include name="jersey-common-2.29.1.jar"/>
+			<include name="jersey-media-json-jackson-2.29.1.jar"/>
+			<include name="jersey-media-multipart-2.29.1.jar"/>
+			<include name="jersey-server-2.29.1.jar"/>
+			<include name="javax.ws.rs-api-2.1.jar"/>
+			<include name="jackson-databind-2.9.5.jar"/>
+			<include name="jackson-core-2.9.5.jar"/>
+			<include name="jackson-annotations-2.9.0.jar"/>
+            <include name="javax.inject-2.5.0-b49.jar"/>
+            <include name="jersey-hk2-2.29.1.jar"/>
+            <include name="tomcat-annotations-api-8.5.47.jar"/>
+            <include name="hk2-api-2.6.1.jar"/>
+            <include name="osgi-resource-locator-1.0.3.jar"/>
+            <include name="hk2-locator-2.6.1.jar"/>
+            <include name="hk2-utils-2.6.1.jar"/>
+            <include name="jersey-entity-filtering-2.29.1.jar"/>
+            <include name="mimepull-1.9.12.jar"/>
             <include name="java-client-7.2.0.jar"/>
             <include name="ant-1.9.6.jar"/>
             <include name="ant-launcher-1.9.6.jar"/>
@@ -79,7 +97,7 @@
             </manifest>
         </jar>
     </target>
-    <target name="main" depends="compile,docs,jar">
+    <target name="main" depends="compile">
         <description>Main target</description>
     </target>
 </project>

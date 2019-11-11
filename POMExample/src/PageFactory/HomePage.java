@@ -13,6 +13,9 @@ public class HomePage
 	@FindBy(xpath="//table//tr[@class='heading3']")
 	WebElement headingUsername;
 
+	@FindBy(css="input[id='mat-input-0']")
+    WebElement txtSearch;
+
 	public HomePage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -24,5 +27,15 @@ public class HomePage
     public WebElement getHomePageDashboardUserName()
     {
         return headingUsername;
+    }
+
+    public WebElement getTxtSearch()
+    {
+        return txtSearch;
+    }
+
+    public void setTxtSearch(String strSearchKey)
+    {
+        txtSearch.sendKeys(strSearchKey);
     }
 }
