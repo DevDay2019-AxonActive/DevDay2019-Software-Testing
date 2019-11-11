@@ -8,7 +8,7 @@
      =======================================================================
 -->
 
-<project name="POMExample" default="main" basedir=".">
+<project name="AutoFramework" default="main" basedir=".">
     <!-- Sets variables which can later be used. -->
     <!-- The value of a property is accessed via ${} -->
     <property name="src.dir" location="src" />
