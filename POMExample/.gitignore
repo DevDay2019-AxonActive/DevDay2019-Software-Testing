@@ -1,0 +1,17 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.idea/
+
+*.iml
+
+test-output/
+
+bin/
+
+build/
+
+conf/libs/
