@@ -20,9 +20,9 @@ public class ApiTest {
 	 */
 	@Test
 	public void test_search_book_with_keyword() {
-		String serviceUrl = "http://192.168.70.59:8080/library-core/api/books/search";
-		System.out.println("Start test with service: " + serviceUrl);
-		ApiRequest request = new ApiRequest(serviceUrl);
+		String apiPath = "/library-core/api/books/search";
+		ApiRequest request = new ApiRequest(apiPath);
+		System.out.println("Start test with service: " + request.getServiceUrl());
 		
 		Map<String, String> jsonBody = new HashMap<>();
 		jsonBody.put("keyword", "Charlotte's Web");
@@ -39,7 +39,7 @@ public class ApiTest {
 			}
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Cannot execute service api " + serviceUrl);
+			System.out.println("Cannot execute service api " + apiPath);
 			e.printStackTrace();
 		}
 	}

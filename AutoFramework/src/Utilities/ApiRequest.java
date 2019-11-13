@@ -13,23 +13,51 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.client.Invocation.Builder;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ApiRequest {
 	
 	private Builder request = null;
-	private String serviceUrl = "";
+	private String apiUrl = "";
+	private String endpoint = "";
+	private Properties prop;
 	
 	public ApiRequest() {
+		loadEndpoint();
+		this.endpoint = prop.getProperty("apiEndpoint");
 	}
 	
-	public ApiRequest(String serviceUrl) {
-		this.serviceUrl = serviceUrl;
+	public ApiRequest(String apiPath) {
+		loadEndpoint();
+		this.endpoint = prop.getProperty("apiEndpoint");
+		this.apiUrl = "http://" + this.endpoint + apiPath;
+	}
+	
+	private void loadEndpoint() {
+		try {
+			InputStream input = new FileInputStream("src/Properties/api.properties");
+			prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	private void initBuilder() {
-		if(this.serviceUrl == "") {
+		if(this.apiUrl == "") {
 			throw new RuntimeException("Service url is empty");
 		}
 		System.out.println("Init Client");
@@ -41,18 +69,18 @@ public class ApiRequest {
 		client.register(MultiPartFeature.class);
 
 		System.out.println("Init WebTarget");
-		WebTarget resource = client.target(serviceUrl);
+		WebTarget resource = client.target(apiUrl);
 		System.out.println("Init request Builder");
 		this.request = resource.request();
 		this.request.accept(MediaType.APPLICATION_JSON);
 	}
 
 	public String getServiceUrl() {
-		return serviceUrl;
+		return apiUrl;
 	}
 
 	public void setServiceUrl(String serviceUrl) {
-		this.serviceUrl = serviceUrl;
+		this.apiUrl = serviceUrl;
 	}
 	
 	public Response get() {
