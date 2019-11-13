@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- =======================================================================
-      File        : $RCSfile: build.xml,v $
-      Author      : anhdo
-      Date        : 8.02.2012
-      Last change : $Date: $ / $Author: anhdo $
-      Version     : $Revision: 1.0 $
-     =======================================================================
--->
 
 <project name="AutoFramework" default="main" basedir=".">
     <!-- Sets variables which can later be used. -->
@@ -14,37 +6,34 @@
     <property name="src.dir" location="src" />
     <property name="build.dir" location="bin" />
     <property name="lib.dir" location="lib" />
-    <property name="dist.dir" location="build/jar" />
-    <property name="docs.dir" location="build/docs" />
+    <property name="docs.dir" location="docs" />
 
     <!-- Deletes the existing build, docs and dist directory-->
     <target name="clean">
         <delete dir="${build.dir}" />
         <delete dir="${docs.dir}" />
-        <delete dir="${dist.dir}" />
     </target>
 
     <!-- Creates the  build, docs and dist directory-->
     <target name="makedir">
         <mkdir dir="${build.dir}" />
         <mkdir dir="${docs.dir}" />
-        <mkdir dir="${dist.dir}" />
     </target>
 
     <path id="build-classpath">
         <fileset dir="${lib.dir}">
             <include name="testng-6.8.jar"/>
-            <include name="commons-httpclient-3.1.jar"/>
-            <include name="commons-lang-2.5.jar"/>
-            <include name="commons-logging-1.2.jar"/>
-            <include name="jptools-1.5.0.jar"/>
-            <include name="jptools-optional-1.5.0.jar"/>
-            <include name="poi-3.9.jar"/>
-            <include name="poi-ooxml-3.9.jar"/>
-            <include name="poi-ooxml-schemas-3.9.jar"/>
-            <include name="poi-scratchpad-3.9.jar"/>
+            <!--include name="commons-httpclient-3.1.jar"/-->
+            <!--include name="commons-lang-2.5.jar"/-->
+            <!--include name="commons-logging-1.2.jar"/-->
+            <!--include name="jptools-1.5.0.jar"/-->
+            <!--include name="jptools-optional-1.5.0.jar"/-->
+            <!--include name="poi-3.9.jar"/-->
+            <!--include name="poi-ooxml-3.9.jar"/-->
+            <!--include name="poi-ooxml-schemas-3.9.jar"/-->
+            <!--include name="poi-scratchpad-3.9.jar"/-->
             <include name="selenium-server-standalone-3.14.0.jar"/>
-            <include name="xmlbeans-2.3.0.jar"/>
+            <!--include name="xmlbeans-2.3.0.jar"/-->
             <include name="jersey-client-2.29.1.jar"/>
             <include name="jersey-common-2.29.1.jar"/>
             <include name="jersey-media-json-jackson-2.29.1.jar"/>
@@ -88,17 +77,8 @@
             </fileset>
         </javadoc>
     </target>
-    <!--Creates the deployable jar file  -->
-    <target name="jar" depends="compile">
-        <jar destfile="${dist.dir}\automation-test-framework.jar" basedir="${build.dir}">
-            <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
-            <manifest>
-                <attribute name="Main-Class" value="automation-test-framework" />
-                <attribute name="Build-Path" value="${build-classpath}" />
-            </manifest>
-        </jar>
-    </target>
-    <target name="main" depends="compile">
+	<!-- main -->
+    <target name="main" depends="compile,docs">
         <description>Main target</description>
     </target>
 </project>
