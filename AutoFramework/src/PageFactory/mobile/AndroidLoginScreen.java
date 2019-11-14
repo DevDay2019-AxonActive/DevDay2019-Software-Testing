@@ -23,11 +23,12 @@ public class AndroidLoginScreen {
     public AndroidLoginScreen(AppiumDriver<MobileElement> driver)
     {
         this.driver = driver;
-        //This initElements method will create  all WebElements
         PageFactory.initElements(new AppiumFieldDecorator(this.driver), this);
     }
 
-    public void clickLogin() {
+    public void login_with(String username, String password) {
+        txtUser.sendKeys(username);
+        txtPass.sendKeys(password);
         btnLogin.click();
     }
 }

@@ -1,4 +1,4 @@
-package Test;
+package Test.api;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Utilities.ApiRequest;
 
-public class ApiTest {
+public class DemoTest {
 
 	/**
 	 * This test will call REST service get single book with Id
