@@ -1,4 +1,4 @@
-package PageFactory;
+package PageFactory.mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
