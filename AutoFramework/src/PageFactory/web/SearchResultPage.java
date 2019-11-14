@@ -44,21 +44,6 @@ public class SearchResultPage
     {
         return divSearchResult;
     }
-
-    /**
-     * Method description
-     *
-     * @param strKeyword
-     * @return numberOfRecord
-     */
-    public int getNumberOfResultNameContainKeyword(String strKeyword)
-    {
-        int numberOfRecord = 0;
-        numberOfRecord = OperatingSystemUtil.findElements(getSearchResult(), "xpath",
-                                                          "//div[@class='col summary d-flex flex-column style-scope div']/h1/strong[contains(text(),'" + strKeyword + "')]").size();
-
-        return numberOfRecord;
-    }
 }
 
 
