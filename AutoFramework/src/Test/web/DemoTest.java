@@ -10,7 +10,7 @@ import Utilities.VerifyUtil;
 public class DemoTest extends AbstractBaseTest
 {
     @Test(priority=1)
-    public void SearchFunction() throws InterruptedException
+    public void search_function() throws InterruptedException
     {
         objHomePage = new HomePage(driver);
         objSearchResultPage = new SearchResultPage(driver);
@@ -20,9 +20,8 @@ public class DemoTest extends AbstractBaseTest
         OperatingSystemUtil.pressEnterKeyOnKeyBoard();
         Thread.sleep(10000);
 
-        // Verify result contains book that has name contain "Rails AntiPatterns"
-        int numberOfBooks = objSearchResultPage.getNumberOfResultNameContainKeyword("Rails AntiPatterns");
-        VerifyUtil.verifyEqual(numberOfBooks, 2);
+        // Verify result is shown
+       VerifyUtil.verifyElementDisplay(objSearchResultPage.getSearchResult());
     }
 
 }
