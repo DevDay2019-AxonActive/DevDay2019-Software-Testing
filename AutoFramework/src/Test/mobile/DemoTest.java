@@ -1,9 +1,9 @@
 package Test.mobile;
 
-import PageFactory.AndroidHomeScreen;
+import PageFactory.mobile.AndroidHomeScreen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import PageFactory.AndroidLoginScreen;
+import PageFactory.mobile.AndroidLoginScreen;
 
 public class DemoTest extends AbstractMobileBaseTest {
 

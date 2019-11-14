@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import PageFactory.HomePage;
-import PageFactory.LoginPage;
-import PageFactory.SearchResultPage;
+import PageFactory.web.HomePage;
+import PageFactory.web.LoginPage;
+import PageFactory.web.SearchResultPage;
 
 public class AbstractBaseTest
 {
@@ -35,21 +35,11 @@ public class AbstractBaseTest
         driver.close();
     }
 
-    /**
-     * Gets the driver
-     *
-     * @return Returns the driver
-     */
     public static WebDriver getDriver()
     {
         return driver;
     }
 
-    /**
-     * Gets the verificationErrors
-     *
-     * @return Returns the driver
-     */
     public static StringBuffer getVerificationErrors()
     {
         return verificationErrors;

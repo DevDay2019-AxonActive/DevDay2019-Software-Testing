@@ -2,8 +2,8 @@ package Test.web;
 
 import org.testng.annotations.Test;
 
-import PageFactory.HomePage;
-import PageFactory.SearchResultPage;
+import PageFactory.web.HomePage;
+import PageFactory.web.SearchResultPage;
 import Utilities.OperatingSystemUtil;
 import Utilities.VerifyUtil;
 

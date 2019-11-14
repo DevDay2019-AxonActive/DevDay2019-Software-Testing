@@ -1,7 +1,7 @@
 package Test.mobile;
 
-import PageFactory.AndroidLoginScreen;
-import PageFactory.AndroidHomeScreen;
+import PageFactory.mobile.AndroidLoginScreen;
+import PageFactory.mobile.AndroidHomeScreen;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;

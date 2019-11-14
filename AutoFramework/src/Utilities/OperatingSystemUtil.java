@@ -15,20 +15,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Test.web.AbstractBaseTest;
 
-import Test.AbstractBaseTest;
-/**
- *
- *
- * @author vnalinh
- * @version $Revision:  $
- */
 public class OperatingSystemUtil extends AbstractBaseTest
 {
-    /**
-     * pressEnterKeyOnKeyBoard
-     *
-     */
     public static void pressEnterKeyOnKeyBoard()
     {
         try
@@ -104,9 +94,3 @@ public class OperatingSystemUtil extends AbstractBaseTest
         }
     }
 }
-
-
-/*
- * Changes:
- * $Log: $
- */
