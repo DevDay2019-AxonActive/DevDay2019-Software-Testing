@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import PageFactory.web.HomePage;
 import PageFactory.web.LoginPage;
 import PageFactory.web.SearchResultPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AbstractBaseTest
 {
@@ -21,7 +22,7 @@ public class AbstractBaseTest
     public void setUp()
     {
         String projectDir = System.getProperty("user.dir");
-        System.setProperty("webdriver.gecko.driver", projectDir + "/conf/GeckoDriverServer/geckodriver.exe");
+        WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://85.214.44.228:4200/");
