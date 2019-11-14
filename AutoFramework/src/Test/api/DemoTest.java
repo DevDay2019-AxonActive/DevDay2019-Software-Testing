@@ -11,12 +11,12 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import Utilities.ApiRequest;
+import PageFactory.api.ApiRequest;
 
 public class DemoTest {
 
 	/**
-	 * This test will call REST service get single book with Id
+	 * This test will call REST service to search book with keyword
 	 */
 	@Test
 	public void test_search_book_with_keyword() {

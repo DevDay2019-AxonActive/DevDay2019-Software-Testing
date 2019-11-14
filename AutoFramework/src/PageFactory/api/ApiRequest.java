@@ -1,4 +1,4 @@
-package Utilities;
+package PageFactory.api;
 
 import org.glassfish.jersey.client.ClientProperties;
 import org.glassfish.jersey.client.JerseyClientBuilder;
@@ -42,7 +42,7 @@ public class ApiRequest {
 	
 	private void loadEndpoint() {
 		try {
-			InputStream input = new FileInputStream("src/Properties/api.properties");
+			InputStream input = new FileInputStream("src/Config/api/api.properties");
 			prop = new Properties();
 
             // load a properties file
@@ -60,7 +60,6 @@ public class ApiRequest {
 		if(this.apiUrl == "") {
 			throw new RuntimeException("Service url is empty");
 		}
-		System.out.println("Init Client");
 		Client client = JerseyClientBuilder.newBuilder().build();
 		client.register(new LoggingFeature(Logger.getGlobal(), Level.INFO, null,null));
 		client.property(ClientProperties.FOLLOW_REDIRECTS, Boolean.FALSE);
@@ -68,9 +67,7 @@ public class ApiRequest {
 		client.register(JacksonFeature.class);
 		client.register(MultiPartFeature.class);
 
-		System.out.println("Init WebTarget");
 		WebTarget resource = client.target(apiUrl);
-		System.out.println("Init request Builder");
 		this.request = resource.request();
 		this.request.accept(MediaType.APPLICATION_JSON);
 	}
