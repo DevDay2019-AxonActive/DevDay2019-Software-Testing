@@ -58,6 +58,11 @@
             <include name="ant-launcher-1.9.6.jar"/>
             <include name="asm-6.0.jar"/>
             <include name="cglib-3.2.6.jar"/>
+            <include name ="webdrivermanager-3.7.1.jar"/>
+            <include name ="slf4j-simple-1.7.21.jar"/>
+            <include name ="slf4j-api-1.7.2.jar"/>
+            <include name ="gson-1.7.1.jar"/>
+            <include name ="jsoup-1.7.1.jar"/>
         </fileset>
     </path>
 
