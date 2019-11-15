@@ -23,12 +23,6 @@ public class HomePage
 		PageFactory.initElements(driver, this);
 	}
 
-	//Get the User name from Home Page
-    public WebElement getHomePageDashboardUserName()
-    {
-        return headingUsername;
-    }
-
     public WebElement getTxtSearch()
     {
         return txtSearch;

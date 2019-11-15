@@ -5,14 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import Utilities.OperatingSystemUtil;
 
-/**
- *
- *
- * @author vnalinh
- * @version $Revision:  $
- */
 public class SearchResultPage
 {
 
@@ -45,9 +38,3 @@ public class SearchResultPage
         return divSearchResult;
     }
 }
-
-
-/*
- * Changes:
- * $Log: $
- */
