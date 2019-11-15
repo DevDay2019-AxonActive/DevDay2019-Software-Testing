@@ -26,27 +26,26 @@ public class ApiRequest {
 	
 	private Builder request = null;
 	private String apiUrl = "";
-	private String endpoint = "";
-	private Properties prop;
+	public String endpoint = "";
+	public Properties prop;
 	
 	public ApiRequest() {
-		loadEndpoint();
-		this.endpoint = prop.getProperty("apiEndpoint");
+		loadApiProp();
 	}
 	
 	public ApiRequest(String apiPath) {
-		loadEndpoint();
-		this.endpoint = prop.getProperty("apiEndpoint");
+		loadApiProp();
 		this.apiUrl = "http://" + this.endpoint + apiPath;
 	}
 	
-	private void loadEndpoint() {
+	private void loadApiProp() {
 		try {
-			InputStream input = new FileInputStream("src/Config/api/api.properties");
+			InputStream input = new FileInputStream("conf/Api/api.properties");
 			prop = new Properties();
 
             // load a properties file
             prop.load(input);
+    		this.endpoint = prop.getProperty("apiEndpoint");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

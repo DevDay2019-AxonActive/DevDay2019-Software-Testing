@@ -12,6 +12,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import PageFactory.api.ApiRequest;
+import PageFactory.api.SearchBookRequest;
 
 public class DemoTest {
 
@@ -20,8 +21,7 @@ public class DemoTest {
 	 */
 	@Test
 	public void test_search_book_with_keyword() {
-		String apiPath = "/library-core/api/books/search";
-		ApiRequest request = new ApiRequest(apiPath);
+		SearchBookRequest request = new SearchBookRequest();
 		System.out.println("Start test with service: " + request.getServiceUrl());
 		
 		Map<String, String> jsonBody = new HashMap<>();
@@ -39,7 +39,7 @@ public class DemoTest {
 			}
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Cannot execute service api " + apiPath);
+			System.out.println("Cannot execute service api " + request.getServiceUrl());
 			e.printStackTrace();
 		}
 	}
