@@ -6,14 +6,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import PageFactory.web.HomePage;
-import PageFactory.web.LoginPage;
 import PageFactory.web.SearchResultPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AbstractBaseTest
 {
     static WebDriver driver;
-    LoginPage objLogin;
     HomePage objHomePage;
     SearchResultPage objSearchResultPage;
     static StringBuffer verificationErrors;
