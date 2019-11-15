@@ -10,7 +10,7 @@ import Utilities.VerifyUtil;
 public class DemoTest extends AbstractBaseTest
 {
     @Test(priority=1)
-    public void search_function() throws InterruptedException
+    public void test_search_book_successfully() throws InterruptedException
     {
         objHomePage = new HomePage(driver);
         objSearchResultPage = new SearchResultPage(driver);
