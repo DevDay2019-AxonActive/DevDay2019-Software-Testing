@@ -12,13 +12,13 @@ public class LoginPage
 	 * All WebElements are identified by @FindBy annotation
 	 */
 	WebDriver driver;
-	@FindBy(name="uid")
+	@FindBy(id="mat-input-0")
 	WebElement txtUsername;
 
-	@FindBy(name="password")
+	@FindBy(id="mat-input-1")
 	WebElement txtPassword;
 
-	@FindBy(name="btnLogin")
+	@FindBy(tagName = "button")
 	WebElement btnLogin;
 
 	public LoginPage(WebDriver driver)
@@ -30,13 +30,15 @@ public class LoginPage
 	//Set user name in textbox
 	public void setUserName(String strUserName)
 	{
+		txtUsername.clear();
 		txtUsername.sendKeys(strUserName);
 	}
 
 	//Set password in password textbox
 	public void setPassword(String strPassword)
 	{
-	    txtPassword.sendKeys(strPassword);
+	    txtPassword.clear();
+		txtPassword.sendKeys(strPassword);
 	}
 
 	//Click on login button

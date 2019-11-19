@@ -3,7 +3,7 @@ package utilities;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import test.web.AbstractBaseTest;
+import web.AbstractBaseTest;
 
 public class VerifyUtil extends AbstractBaseTest
 {

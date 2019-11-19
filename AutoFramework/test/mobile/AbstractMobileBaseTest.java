@@ -1,4 +1,4 @@
-package test.mobile;
+package mobile;
 
 import pages.mobile.AndroidLoginScreen;
 import pages.mobile.AndroidHomeScreen;
@@ -41,7 +41,7 @@ public abstract class AbstractMobileBaseTest {
             capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
             capabilities.setCapability(MobileCapabilityType.APP, prop.get("APP"));
             // Initialize driver
-            driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+            driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 
         } catch (IOException ex) {
             ex.printStackTrace();

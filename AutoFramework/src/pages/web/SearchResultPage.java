@@ -16,10 +16,15 @@ public class SearchResultPage
     @FindBy(css="div[class='ng-star-inserted']")
     WebElement divSearchResult;
 
+    @FindBy(id="mat-input-0")
+    WebElement userName;
+    @FindBy(id="mat-input-1")
+    WebElement password;
+
     /**
      * Constructor
      *
-     * @param driver
+     * @param driver the suitable web driver
      */
     public SearchResultPage(WebDriver driver)
     {

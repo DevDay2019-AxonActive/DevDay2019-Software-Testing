@@ -1,4 +1,4 @@
-package test.web;
+package web;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.web.HomePage;
+import pages.web.LoginPage;
 import pages.web.SearchResultPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -14,16 +15,16 @@ public class AbstractBaseTest
     static WebDriver driver;
     HomePage objHomePage;
     SearchResultPage objSearchResultPage;
+    LoginPage objLoginPage;
     static StringBuffer verificationErrors;
 
     @BeforeMethod
     public void setUp()
     {
-        String projectDir = System.getProperty("user.dir");
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("http://85.214.44.228:4200/");
+        driver.get("http://localhost:4200/");
         verificationErrors = new StringBuffer();
         verificationErrors.setLength(0);
     }

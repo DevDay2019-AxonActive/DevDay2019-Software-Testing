@@ -23,17 +23,7 @@
     <path id="build-classpath">
         <fileset dir="${lib.dir}">
             <include name="testng-6.8.jar"/>
-            <!--include name="commons-httpclient-3.1.jar"/-->
-            <!--include name="commons-lang-2.5.jar"/-->
-            <!--include name="commons-logging-1.2.jar"/-->
-            <!--include name="jptools-1.5.0.jar"/-->
-            <!--include name="jptools-optional-1.5.0.jar"/-->
-            <!--include name="poi-3.9.jar"/-->
-            <!--include name="poi-ooxml-3.9.jar"/-->
-            <!--include name="poi-ooxml-schemas-3.9.jar"/-->
-            <!--include name="poi-scratchpad-3.9.jar"/-->
             <include name="selenium-server-standalone-3.14.0.jar"/>
-            <!--include name="xmlbeans-2.3.0.jar"/-->
             <include name="jersey-client-2.29.1.jar"/>
             <include name="jersey-common-2.29.1.jar"/>
             <include name="jersey-media-json-jackson-2.29.1.jar"/>

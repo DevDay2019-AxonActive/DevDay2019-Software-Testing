@@ -13,7 +13,7 @@ public class HomePage
 	@FindBy(xpath="//table//tr[@class='heading3']")
 	WebElement headingUsername;
 
-	@FindBy(css="input[id='mat-input-0']")
+	@FindBy(id="mat-input-2")
     WebElement txtSearch;
 
 	public HomePage(WebDriver driver)
